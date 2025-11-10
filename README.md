@@ -56,7 +56,7 @@ The XGBoost-on-FPGA FDIR system delivers a **precise, rapid, and radiation-resil
 · arXiv preprint
     Link: https://arxiv.org/pdf/2407.04730
 
-    · Use of Triple Modular Redundancy (TMR) technology
+· Use of Triple Modular Redundancy (TMR) technology
     Google Scholar
     Link: https://share.google/6FnwssehwG4plA4TN
 · A Review of Anomaly Detection in Spacecraft
