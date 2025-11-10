@@ -1,42 +1,42 @@
-# AESS-IES-TSYP-13: Système FDIR Autonome par XGBoost Accéléré sur FPGA
+# AESS-IES-TSYP-13: Autonomous FDIR System via FPGA-Accelerated XGBoost
 
-Ce projet propose un système de **Détection, Isolation et Récupération des Fautes (FDIR)** embarqué pour un CubeSat 3U. Notre solution garantit une **vitesse électronique** et une **résilience spatiale** en accélérant un modèle d'Intelligence Artificielle (XGBoost) directement sur la logique reconfigurable d'un FPGA de grade spatial (Rad-Tolerant), éliminant ainsi le besoin d'intervention immédiate de l'ordinateur de bord (OBC) ou du sol.
+This project presents an embedded **Fault Detection, Isolation, and Recovery (FDIR)** system for a 3U CubeSat. Our solution ensures **electronic speed** and **space resilience** by accelerating an Artificial Intelligence model (XGBoost) directly onto the reconfigurable logic of a space-grade FPGA (Rad-Tolerant). This design eliminates the need for immediate intervention from the On-Board Computer (OBC) or ground control, guaranteeing critical autonomy.
 
-### Objectifs Clés
-* **Vitesse :** Latence de diagnostic totale de **5–10 µs** par traitement parallèle RTL.
-* **Fiabilité :** Implémentation de la **Triple Modular Redundancy (TMR)** pour la résilience aux radiations.
-* **Autonomie :** Rétablissement déterministe et immédiat des fautes critiques (ADCS/EPS).
-
----
-
-## Architecture, Technologies et Flux de Travail
-
-L'architecture est basée sur une boucle de contrôle fermée et ultra-rapide (voir les diagrammes dans `5_DOCUMENTATION/`). Le flux de données est direct : **Capteurs ADCS/EPS** $\to$ **ADC** $\to$ **FPGA** $\to$ **Actuateurs/Drivers**.
-
-Le cœur du diagnostic est l'algorithme **XGBoost (eXtreme Gradient Boosting)**, choisi pour sa précision supérieure en **Détection et Isolation** des fautes sur les données tabulaires des capteurs. Ce modèle est exécuté sur le **FPGA** qui, au-delà de sa **vitesse électronique**, implémente la **TMR** au niveau RTL pour assurer la fiabilité des diagnostics. La preuve du concept repose sur la **Simulation MATLAB/Simulink**, utilisée pour modéliser la dynamique orbitale et générer des jeux de données d'entraînement réalistes, assurant ainsi la pertinence de l'algorithme.
+### Key Objectives
+* **Speed:** Total diagnostic latency of **5–10 µs** achieved through parallel RTL processing.
+* **Reliability:** Implementation of **Triple Modular Redundancy (TMR)** for radiation resilience.
+* **Autonomy:** Deterministic and immediate recovery from critical faults (ADCS/EPS).
 
 ---
 
-## Structure du Dépôt
+## 🛠️ Architecture, Technologies, and Workflow
 
-La structure reflète le flux de travail d'ingénierie du système :
+The architecture is based on a high-speed, closed-loop control system (see diagrams in `5_DOCUMENTATION/`). The data flow is direct: **ADCS/EPS Sensors** $\to$ **ADC** $\to$ **FPGA** $\to$ **Actuators/Drivers**.
 
-* **`1_DATA_SIMULATION/`** contient les scripts MATLAB/Simulink et les données d'entraînement brutes.
-* **`2_MODEL_DEVELOPMENT/`** est dédié au code Python et aux scripts de quantification du modèle (4-8 bits).
-* **`3_HARDWARE_RTL/`** héberge le code C/C++ HLS et les fichiers Verilog/VHDL finaux (avec TMR).
-* **`4_VERIFICATION/`** contient les testbenches pour la vérification RTL et les logs de simulation.
-* **`5_DOCUMENTATION/`** regroupe le rapport final, le schéma synoptique et le diagramme de fonctionnement.
+The diagnostic core is the **XGBoost (eXtreme Gradient Boosting)** algorithm, chosen for its superior accuracy in **Fault Detection and Isolation** on tabular sensor data. The model is executed on the **FPGA** which, beyond providing **electronic speed**, implements **TMR** at the RTL level to ensure diagnostic reliability. The proof-of-concept relies on **MATLAB/Simulink Simulation**, used to model orbital dynamics and generate realistic training datasets, ensuring the algorithm's relevance.
 
 ---
 
-## Résultats Clés et Preuve de Succès
+## 📂 Repository Structure
 
-Le succès de la conception est confirmé par l'atteinte des indicateurs de performance critiques :
+The structure reflects the system's engineering workflow:
 
-| Métrique | Résultat Obtenu | Preuve du Succès |
+* **`1_DATA_SIMULATION/`** contains MATLAB/Simulink scripts and raw training data.
+* **`2_MODEL_DEVELOPMENT/`** houses the initial Python code for XGBoost and the model quantization scripts (4-8 bits).
+* **`3_HARDWARE_RTL/`** holds the HLS C/C++ code and the final Verilog/VHDL files (including TMR logic).
+* **`4_VERIFICATION/`** contains the Testbench files for RTL verification and simulation logs.
+* **`5_DOCUMENTATION/`** groups the final report, synoptic diagram, and flow chart.
+
+---
+
+## 📈 Key Results and Proof of Success
+
+The success of the design is confirmed by achieving critical performance indicators:
+
+| Metric | Result Achieved | Proof of Success |
 | :--- | :--- | :--- |
-| **Latence d'Inférence** | **5−10 µs** | Respect strict du critère de **Vitesse Électronique** pour l'ADCS. |
-| **Précision d'Isolation** | **> 96.6%** | Haute fiabilité du diagnostic permettant un rétablissement autonome. |
-| **Résilience** | **TMR Actif** | Validation de la conception pour l'environnement spatial (Mitigation des SEU). |
+| **Inference Latency** | **5−10 µs** | Strict adherence to the **Electronic Speed** criterion for ADCS. |
+| **Isolation Accuracy** | **> 96.6%** | High diagnostic reliability enabling autonomous recovery. |
+| **Resilience** | **Active TMR** | Design validated for the space environment (SEU Mitigation). |
 
-Le système FDIR par XGBoost sur FPGA offre une solution **précise, rapide et résiliente aux radiations** pour les opérations critiques d'un CubeSat 3U.
+The XGBoost-on-FPGA FDIR system delivers a **precise, rapid, and radiation-resilient** solution for the critical operations of a 3U CubeSat.
