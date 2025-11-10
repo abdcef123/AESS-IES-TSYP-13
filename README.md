@@ -9,7 +9,7 @@ This project presents an embedded **Fault Detection, Isolation, and Recovery (FD
 
 ---
 
-## 🛠️ Architecture, Technologies, and Workflow
+## Architecture, Technologies, and Workflow
 
 The architecture is based on a high-speed, closed-loop control system (see diagrams in `5_DOCUMENTATION/`). The data flow is direct: **ADCS/EPS Sensors** $\to$ **ADC** $\to$ **FPGA** $\to$ **Actuators/Drivers**.
 
@@ -17,7 +17,7 @@ The diagnostic core is the **XGBoost (eXtreme Gradient Boosting)** algorithm, ch
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 The structure reflects the system's engineering workflow:
 
@@ -29,7 +29,7 @@ The structure reflects the system's engineering workflow:
 
 ---
 
-## 📈 Key Results and Proof of Success
+##  Key Results and Proof of Success
 
 The success of the design is confirmed by achieving critical performance indicators:
 
