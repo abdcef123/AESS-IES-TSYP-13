@@ -48,5 +48,7 @@ The XGBoost-on-FPGA FDIR system delivers a **precise, rapid, and radiation-resil
 · A Robust Indoor Positioning System Based on the Procrustes Analysis and Weighted Extreme Learning Machine
     IEEE International Conference on Wireless Information Technology and Systems
     Link: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5873878
+
+
 · arXiv preprint
     Link: https://arxiv.org/pdf/2407.04730
