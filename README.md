@@ -17,7 +17,7 @@ The data flow is direct: **ADCS/EPS Sensors** → **ADC** → **FPGA** → **Act
 
 The diagnostic core is the **XGBoost (eXtreme Gradient Boosting)** algorithm, chosen for its superior accuracy in **Fault Detection and Isolation** on tabular sensor data. The model is executed on the **FPGA** which, beyond providing **electronic speed**, implements **TMR** at the RTL level to ensure diagnostic reliability. The proof-of-concept relies on **MATLAB/Simulink Simulation**, used to model orbital dynamics and generate realistic training datasets, ensuring the algorithm's relevance.
 
-![System Overview Diagram](Synoptique .png)
+![System Overview Diagram](Overview_diagram.jpeg)
 ---
 
 ##  Repository Structure
