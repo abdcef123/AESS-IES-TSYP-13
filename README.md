@@ -67,3 +67,9 @@ The XGBoost-on-FPGA FDIR system delivers a **precise, rapid, and radiation-resil
 · Use of FPGA in Real-Time Control Systems for Aerospace
     Google Scholar
     Link: https://share.google/CekPDDCho796YxmzE
+    · IEEE Aerospace Conference Papers
+    IEEE Xplore
+    Link: https://ieeexplore.ieee.org/
+· CubeSat Reliability and Testing Standards
+    CubeSat Program
+    Link: https://www.cubesat.org/
