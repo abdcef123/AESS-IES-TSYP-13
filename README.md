@@ -6,7 +6,7 @@ This project presents an embedded **Fault Detection, Isolation, and Recovery (FD
  * **Speed:** Total diagnostic latency of **5–10 µs** achieved through parallel RTL processing.
  * **Reliability:** Implementation of **Triple Modular Redundancy (TMR)** for radiation resilience.
  * **Autonomy:** Deterministic and immediate recovery from critical faults (ADCS/EPS).
-
+overview_digram.jpeg
 ---
 
 ## Architecture, Technologies, and Workflow
