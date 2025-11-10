@@ -16,8 +16,7 @@ The architecture is based on a high-speed, closed-loop control system (see diagr
 The data flow is direct: **ADCS/EPS Sensors** → **ADC** → **FPGA** → **Actuators/Drivers**.
 
 ### 🔷 Synoptic Diagram
-![Synoptic Diagram](Synoptic_Diagram.png)
-*Figure — High-level system architecture illustrating the sensor-to-actuator FDIR data flow.*
+![Synoptic Diagram](Synoptic Diagram.png)
 ---
 The diagnostic core is the **XGBoost (eXtreme Gradient Boosting)** algorithm, chosen for its superior accuracy in **Fault Detection and Isolation** on tabular sensor data. The model is executed on the **FPGA** which, beyond providing **electronic speed**, implements **TMR** at the RTL level to ensure diagnostic reliability. The proof-of-concept relies on **MATLAB/Simulink Simulation**, used to model orbital dynamics and generate realistic training datasets, ensuring the algorithm's relevance.
 
