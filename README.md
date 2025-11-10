@@ -8,7 +8,7 @@ Ce projet présente un système de **Détection, Isolation et Récupération des
 * **Autonomie :** Rétablissement déterministe et immédiat des fautes critiques (ADCS/EPS).
 * ---
 
-## 🛠️ Architecture et Technologies
+## Architecture et Technologies
 
 L'architecture est basée sur une boucle de contrôle fermée et ultra-rapide (voir `5_DOCUMENTATION/Synoptic_Diagram.png`).
 
@@ -20,9 +20,8 @@ L'architecture est basée sur une boucle de contrôle fermée et ultra-rapide (v
 | **Simulation** | **MATLAB/Simulink** | Modélisation de la dynamique orbitale et génération des jeux de données d'entraînement réalistes. |
 ---
 
-## 📂 Structure du Dépôt
+##  Structure du Dépôt
 
-Cette structure reflète le flux de travail de l'ingénierie du système (Data → Logiciel → Matériel → Vérification).
 
 | Dossier | Contenu | Objectif |
 | :--- | :--- | :--- |
@@ -33,7 +32,7 @@ Cette structure reflète le flux de travail de l'ingénierie du système (Data �
 | `5_DOCUMENTATION/` | Rapport technique final, schémas synoptiques et de fonctionnement. | Fournir le contexte et les résultats de l'ingénierie du système. |
 
 ---
-## 📈 Résultats Clés (KPIs)
+## Résultats Clés (KPIs)
 
 | Métrique | Résultat Obtenu | Preuve du Succès |
 | :--- | :--- | :--- |
@@ -43,10 +42,3 @@ Cette structure reflète le flux de travail de l'ingénierie du système (Data �
 
 ---
 
-## ✅ Prochaines Étapes
-
-Pour exécuter et vérifier le projet :
-
-1.  Clonez le dépôt.
-2.  Commencez par `1_DATA_SIMULATION/` pour comprendre l'injection des fautes.
-3.  Vérifiez les résultats du Testbench dans `4_VERIFICATION/` pour confirmer la latence de $\mathbf{5-10\ \mu s}$.
