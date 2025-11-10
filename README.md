@@ -3,9 +3,9 @@
 This project presents an embedded **Fault Detection, Isolation, and Recovery (FDIR)** system for a 3U CubeSat. Our solution ensures **electronic speed** and **space resilience** by accelerating an Artificial Intelligence model (XGBoost) directly onto the reconfigurable logic of a space-grade FPGA (Rad-Tolerant). This design eliminates the need for immediate intervention from the On-Board Computer (OBC) or ground control, guaranteeing critical autonomy.
 
 ### Key Objectives
-* **Speed:** Total diagnostic latency of **5–10 µs** achieved through parallel RTL processing.
-* **Reliability:** Implementation of **Triple Modular Redundancy (TMR)** for radiation resilience.
-* **Autonomy:** Deterministic and immediate recovery from critical faults (ADCS/EPS).
+ **Speed:** Total diagnostic latency of **5–10 µs** achieved through parallel RTL processing.
+ **Reliability:** Implementation of **Triple Modular Redundancy (TMR)** for radiation resilience.
+ **Autonomy:** Deterministic and immediate recovery from critical faults (ADCS/EPS).
 
 ---
 
@@ -21,11 +21,11 @@ The diagnostic core is the **XGBoost (eXtreme Gradient Boosting)** algorithm, ch
 
 The structure reflects the system's engineering workflow:
 
-* **`1_DATA_SIMULATION/`** contains MATLAB/Simulink scripts and raw training data.
-* **`2_MODEL_DEVELOPMENT/`** houses the initial Python code for XGBoost and the model quantization scripts (4-8 bits).
-* **`3_HARDWARE_RTL/`** holds the HLS C/C++ code and the final Verilog/VHDL files (including TMR logic).
-* **`4_VERIFICATION/`** contains the Testbench files for RTL verification and simulation logs.
-* **`5_DOCUMENTATION/`** groups the final report, synoptic diagram, and flow chart.
+ **`1_DATA_SIMULATION/`** contains MATLAB/Simulink scripts and raw training data.
+ **`2_MODEL_DEVELOPMENT/`** houses the initial Python code for XGBoost and the model quantization scripts (4-8 bits).
+ **`3_HARDWARE_RTL/`** holds the HLS C/C++ code and the final Verilog/VHDL files (including TMR logic).
+ **`4_VERIFICATION/`** contains the Testbench files for RTL verification and simulation logs.
+ **`5_DOCUMENTATION/`** groups the final report, synoptic diagram, and flow chart.
 
 ---
 
